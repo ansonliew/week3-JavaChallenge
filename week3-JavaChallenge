@@ -1,0 +1,27 @@
+// Example2:
+// An onject is a data type that represent a "Real World" object in programming
+var stuDent = {
+  "name" : "Amy",
+  "studentId" : 12345,
+  "eMail" : "amy@bac.edu.my",
+  "pHone" : "012342678"
+}
+
+// I can access the value using [""] or dot notation
+console.log(stuDent["name"]);
+console.log(stuDent.studentId);
+console.log(stuDent.pHone);
+console.log(stuDent["name"], "" + stuDent.studentId);
+
+// Example3:
+function vowelCounter(sentence){
+  //Intialize the answer
+  var answer = 0;
+  for (var i = 0; i < sentence.length; i++) {
+    if (sentence.charAt(i) == 'a' || sentence.charAt(i) == 'e' || sentence.charAt(i) == 'i' || sentence.charAt(i) == 'o' || sentence.charAt(i) == 'u' || sentence.charAt(i) == 'A' || sentence.charAt(i) == 'E' || sentence.charAt(i) == 'I' || sentence.charAt(i) == 'O' || sentence.charAt(i) == 'U'){
+        answer++
+        }
+  }
+  return answer;
+}
+console.log(vowelCounter("Industry 4.0 Academy"));
