@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<p>Select a weapon:</p>
+	<button onclick="buttonClickedRock()">Rock</button>
+	<button onclick="buttonClickedPaper()">Paper</button>
+	<button onclick="buttonClickedScissors()">Scissors</button>
+
+<!-- The way to add Javascript -->
+<script type="text/javascript">
+	var userScore = 0;
+	var computerScore = 0;
+
+	function buttonClickedRock(){
+	var randomNumberComp = Math.floor(Math.random() * 3);
+	if (randomNumberComp == 0){
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Rock. It's a draw. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else if (randomNumberComp == 1){
+		computerScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Paper. You Lose. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else {
+		userScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Scissors. You Win. Computer: "+computerScore+ " User: "+userScore)
+		}
+}
+	function buttonClickedPaper(){
+	var randomNumberComp = Math.floor(Math.random() * 3);
+	if (randomNumberComp == 0){
+		userScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Rock. You Win. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else if (randomNumberComp == 1){
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Paper. It's a draw. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else {
+		computerScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Scissors. You Lose. Computer: "+computerScore+ " User: "+userScore)
+		}			
+	}
+	
+	function buttonClickedScissors(){
+	var randomNumberComp = Math.floor(Math.random() * 3);
+	if (randomNumberComp == 0){
+		computerScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Rock. You Lose. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else if (randomNumberComp == 1){
+		userScore ++;
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Paper. You Win. Computer: "+computerScore+ " User: "+userScore)
+		}
+	else {
+		<!--alert = Bring out an alart into the screen -->
+		alert("Computer select Scissors. It's a draw. Computer: "+computerScore+ " User: "+userScore)
+		}			
+	}
+
+</script>
+</body>
+</html>
