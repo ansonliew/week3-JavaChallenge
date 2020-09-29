@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess a number</title>
+</head>
+<body>
+	<h1>Guess a number</h1>
+	<p>Guess a number from 1 to 100</p>
+	<input type="number" placeholder="Enter your number here" id="userNumber">
+	<button onclick="buttonPressed()">Guess a number</button>
+	<button onclick="resetGame()">Reset</button>
+
+	<script type="text/javascript">
+
+		var userChance = 5;
+		var randomNumber = Math.ceil(Math.random() * 100);
+		alert(randomNumber);
+
+		function buttonPressed(){
+			var userNumber = document.getElementById("userNumber").value;
+
+			if ((randomNumber != userNumber) && (randomNumber > userNumber)){userChance --;
+
+				if(userChance>0){
+					alert("The number you guess is Low. Chance remaining: "+userChance)}
+				else {
+					alert("Game Over!. The randomNumber is "+randomNumber+ " The game will be restart!")
+					userChance = 5;
+					resetGame();
+					}
+				}
+
+			else if ((randomNumber != userNumber) && (randomNumber < userNumber)){
+				userChance --;
+				if(userChance>0){
+				alert("The number you guess is High. Chance remaining: "+userChance)
+				}
+				else {
+					alert("Game Over!. The randomNumber is "+randomNumber+ " The game will be restart!")
+					userChance = 5;
+					resetGame();
+				}
+			}
+			else {
+				alert("Congratulation for the right guess!")
+				resetGame();
+			}
+			document.getElementById("userNumber").value = "";
+		}
+
+		function resetGame(){
+			randomNumber = Math.ceil(Math.random() * 100);
+			userChance = 5;
+		}
+		
+	</script>
+</body>
+</html>
