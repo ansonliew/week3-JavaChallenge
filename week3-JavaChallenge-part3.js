@@ -17,6 +17,7 @@
 
 // console.log(findLongestWord("Welcome to Asia Developer Academy"));
 
+
 // //(Q2)LARGEST ADJACENT PRODUCT
 // function findLargestAdjProduct(arr){
 //   var largestAdjProduct = arr[0] * arr[1]; //Can put 0 here as well
@@ -29,3 +30,29 @@
 // }
 
 // console.log(findLargestAdjProduct([3,6,-2,-5,7,3]));
+
+
+// //(Q3)TRANSFORM HOUR TO MILITARY FORMAT
+// function transHrToMilitary(input){
+//   var inputSplit = input.split(":");
+//   var hoursStr = inputSplit[0];
+//   var hoursInt = parseInt(hoursStr);
+//   var minutesStr = inputSplit[1];
+//   var secondsStr = inputSplit[2].substring(0,2);
+//   var AmPmStr = inputSplit[2].substring(2);
+
+// if ((hoursInt >= 0 && hoursInt <= 11) && AmPmStr == "AM"){
+//   calculateTime = hoursInt + ":" + minutesStr + ":" + secondsStr;
+// }
+//   else if (hoursInt == 12 && AmPmStr == "AM") {
+//     calculateTime = "00" + ":" + minutesStr + ":" + secondsStr;
+//   }
+//   else if ((hoursInt >= 0 && hoursInt <= 12) && AmPmStr == "PM") {
+//     calculateTime = (hoursInt+12) + ":" + minutesStr + ":" + secondsStr;
+//   }
+//   else {
+//     calculateTime = "Please re-enter the correct time and format!"
+//   }
+// return calculateTime
+// }
+// console.log(transHrToMilitary("11:05:45AM"))
