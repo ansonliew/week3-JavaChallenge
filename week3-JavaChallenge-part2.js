@@ -56,3 +56,26 @@
 // return calculateTime
 // }
 // console.log(transHrToMilitary("11:05:45AM"))
+
+
+// //Q3 answer provided by Wan
+// function transformMilitary(timeString){
+//   if (timeString.charAt(8) == "A"){
+//     if (timeString.substring(0,2) == "12"){
+//       return "00"+timeString.substring(2,8);
+//     }
+//     else {
+//       return timeString.substring(0,8)
+//     }
+//   }
+//   else {
+//     if (timeString.substring(0,2) == "12") {
+//       return timeString.substring(0,8)
+//     }
+//     else {
+//       return (parseInt(timeString.substring(0,2))+12)+timeString.substring(2,8);
+//     }
+//   }
+// }
+// console.log(transformMilitary("10:05:45AM"))
+// console.log(transformMilitary("09:05:45PM"))
